@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+//colors
+$green: #00e77f;
+$white: #fff;
+$light-white: #aaa;
+$black: #3d3d3d;
+$light-bg: #4b4b4b;
+
+//main rules
+
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+*::selection {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  height: 0.25rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $green;
+  border-radius: 5rem;
+}
+body {
+  background-color: $black;
+}
+.btnn {
+  background-color: $light-bg;
+  padding: 10px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: $white;
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}
+.heading {
+  font-size: 50px;
+  color: $white;
+  margin-bottom: 30px;
+  text-align: center;
+  span {
+    color: $green;
+  }
+}
+// start header
+header {
+  background-color: $light-bg;
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .navbar-brand {
+    color: $white;
+  }
+  .nav-link {
+    color: $light-white;
+    &.active {
+      color: $green;
+    }
+    &:hover {
+      color: $green;
+    }
+  }
+}
+// end header
+// start layout
+.home {
+  .container {
+    height: calc(100vh - 66px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        font-size: 80px;
+        &:first-of-type {
+          color: $white;
+        }
+        &:last-of-type {
+          color: $green;
+          margin-top: -20px;
+        }
+      }
+    }
+    .image {
+      img {
+        width: 500px;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .container {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      height: auto;
+      .text {
+        h1 {
+          font-size: 60px;
+        }
+      }
+      .image {
+        img {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+// end layout
+// start progress
+.progress {
+  height: auto;
+  background-color: $black;
+  padding: 50px 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    .box {
+      background-color: $light-bg;
+      padding: 12px 20px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      .text {
+        span {
+          display: block;
+          font-size: 20px;
+          color: $white;
+          &:last-of-type {
+            color: $light-white;
+          }
+        }
+      }
+      svg {
+        font-size: 50px;
+        color: $green;
+      }
+    }
+  }
+}
+// end progress
+// start choose
+.about {
+  padding: 50px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    .image {
+      flex: 1 1 25rem;
+      img {
+        max-width: 100%;
+      }
+    }
+    .info {
+      flex: 1 1 25rem;
+      h2 {
+        color: $white;
+      }
+      p {
+        color: $light-white;
+        line-height: 1.8;
+        margin: 20px 0 40px;
+      }
+    }
+  }
+}
+// end choose
+// start courses
+.courses {
+  padding: 100px 0;
+  height: auto;
+  .container {
+    position: relative;
+    .swiper {
+      position: initial;
+    }
+    .box {
+      text-align: center;
+      background-color: $light-bg;
+      padding: 20px;
+      border-radius: 15px;
+      img {
+        height: 250px;
+        width: 300px;
+      }
+      h3 {
+        color: $white;
+      }
+      p {
+        color: $light-white;
+      }
+    }
+    .swiper-pagination {
+      bottom: -40px;
+      position: absolute;
+    }
+    .swiper-pagination-bullet {
+      background-color: $white;
+      bottom: 0;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $green;
+    }
+  }
+}
+// end courses
+// start teacher
+.teacher {
+  padding: 100px 0;
+  .container {
+    position: relative;
+    .swiper {
+      position: initial;
+    }
+    .box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      ul {
+        position: absolute;
+        top: 20px;
+        left: -100px;
+        li {
+          width: 30px;
+          height: 30px;
+          margin-bottom: 10px;
+          background-color: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          cursor: pointer;
+          svg {
+            color: $black;
+          }
+          &:hover {
+            background-color: $green;
+            svg {
+              color: $white;
+            }
+          }
+        }
+      }
+      &:hover ul {
+        left: 0;
+      }
+      h3 {
+        color: $white;
+        margin-top: 20px;
+      }
+      text-align: center;
+      img {
+        // height: 300px;
+        height: 500px;
+        width: 400px;
+        max-width: 100%;
+      }
+    }
+    .swiper-pagination {
+      bottom: -40px;
+      position: absolute;
+    }
+    .swiper-pagination-bullet {
+      background-color: $white;
+      bottom: 0;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $green;
+    }
+  }
+}
+// end teacher
+// start reviews
+.reviews {
+  padding: 100px 0;
+  .container {
+    position: relative;
+    .swiper {
+      position: initial;
+    }
+    .box {
+      background-color: $light-bg;
+      padding: 20px;
+      border-radius: 10px;
+      p {
+        color: $light-white;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      .review-persons {
+        img {
+          width: 80px;
+          border-radius: 50%;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text {
+          h3 {
+            font-size: 20px;
+            color: $white;
+            margin: 0 5px;
+          }
+          ul {
+            display: flex;
+            padding: 0;
+            li {
+              svg {
+                font-size: 15px;
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      bottom: -40px;
+      position: absolute;
+    }
+    .swiper-pagination-bullet {
+      background-color: $white;
+      bottom: 0;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $green;
+    }
+  }
+}
+// end reviews
+// start contact
+.contact {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    .image {
+      flex: 1 1 20rem;
+    }
+    form {
+      flex: 1 1 20rem;
+
+      label {
+        color: $light-white;
+        display: block;
+        margin: 10px 0;
+      }
+      .name,
+      .email,
+      .number,
+      select {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: $light-bg;
+        border-radius: 6px;
+      }
+      select {
+        color: $white;
+        option {
+          color: $light-white;
+        }
+      }
+      .box:last-of-type {
+        margin-bottom: 20px;
+        label {
+          margin: 10px 0 -15px;
+        }
+        span {
+          color: $light-white;
+        }
+        input {
+          width: 20px;
+          height: 20px;
+          background-color: $light-white;
+          appearance: none;
+        }
+      }
+      a {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+// end contact
+footer {
+  background-color: $light-bg;
+  text-align: center;
+  padding: 10px 0;
+  p {
+    font-size: 20px;
+    color: $light-white;
+    span {
+      font-size: 25px;
+      color: $green;
+    }
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    p {
+      font-size: 10px;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}
