@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -64,19 +65,19 @@
     <!-- start layout -->
     <div class="home" id="home">
       <div class="container">
-        <div class="text">
+        <div class="text" data-aos="fade-right">
           <h1>online</h1>
           <h1>Education</h1>
           <a href="#" class="btnn">contact me</a>
         </div>
-        <div class="image">
+        <div class="image" data-aos="fade-left" datao-aos-duration="2000">
           <img src="images/homg-img.svg" alt="" />
         </div>
       </div>
     </div>
     <!-- end layout -->
     <!-- start progerss -->
-    <div class="progress">
+    <div class="progress" data-aos="fade-down">
       <div class="container">
         <div class="box">
           <div class="icon">
@@ -120,10 +121,10 @@
     <!-- start about -->
     <div class="about" id="about">
       <div class="container">
-        <div class="image">
+        <div class="image" data-aos="fade-right">
           <img src="images/about-img.svg" alt="" />
         </div>
-        <div class="info text-center">
+        <div class="info text-center" data-aos="fade-left">
           <h2>why choose us?</h2>
           <p>
             Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Cumque
@@ -137,8 +138,10 @@
     <!-- start courses -->
     <div class="courses" id="courses">
       <div class="container">
-        <h1 class="text center heading">OUR <span>COURSES</span></h1>
-        <div class="swiper slider-coureses">
+        <h1 class="text center heading" data-aos="fade-left">
+          OUR <span>COURSES</span>
+        </h1>
+        <div class="swiper slider-coureses" data-aos="fade-up">
           <div class="swiper-wrapper">
             <div class="box swiper-slide">
               <img src="images/course-1.svg" alt="" />
@@ -189,8 +192,10 @@
     <!-- start teacher -->
     <div class="teacher" id="teacher">
       <div class="container">
-        <h1 class="text center heading">EXPERT <span>TEACHER</span></h1>
-        <div class="swiper slider-coureses">
+        <h1 class="text center heading" data-aos="fade-right">
+          EXPERT <span>TEACHER</span>
+        </h1>
+        <div class="swiper slider-coureses" data-aos="fade-up">
           <div class="swiper-wrapper">
             <div class="box swiper-slide">
               <img src="images/tutor-1.png" alt="" />
@@ -309,8 +314,10 @@
     <!-- start reviews -->
     <div class="reviews" id="reviews">
       <div class="container">
-        <h1 class="text center heading">OUR <span>REVIEWS</span></h1>
-        <div class="swiper slider-coureses">
+        <h1 class="text center heading" data-aos="fade-down">
+          OUR <span>REVIEWS</span>
+        </h1>
+        <div class="swiper slider-coureses" data-aos="fade-up">
           <div class="swiper-wrapper">
             <div class="box swiper-slide">
               <p>
@@ -420,12 +427,14 @@
     <!-- end reviews -->
     <!-- start contact-us -->
     <div class="contact" id="contact">
-      <h1 class="text center heading">OUR <span>CONTACT</span></h1>
+      <h1 class="text center heading" data-aos="fade-down">
+        OUR <span>CONTACT</span>
+      </h1>
       <div class="container">
-        <div class="image">
+        <div class="image" data-aos="fade-right">
           <img src="images/contact-img.svg" alt="" />
         </div>
-        <form action="">
+        <form action="" data-aos="fade-left">
           <div class="box">
             <label for="">Your name</label>
             <input placeholder="Enter your email" class="name" type="text" />
@@ -473,6 +482,7 @@
       </p>
     </footer>
     <!-- end footer -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

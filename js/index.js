@@ -18,3 +18,7 @@ var swiper = new Swiper(".slider-coureses", {
     },
   },
 });
+AOS.init({
+  delay: 0,
+  duration: 1000,
+});
